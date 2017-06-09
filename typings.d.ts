@@ -8,6 +8,9 @@ declare module "*.html" {
   const template: string;
   export default template;
 }
+declare var Fake: {
+  sentence(words: number): string;
+}
 
 declare module "*.scss" {
   const style: string;

@@ -1,0 +1,24 @@
+<div class="well-lg">
+    <table class="table table-bordered text-center">
+        <thead class="text-capitalize text-danger">
+            <td>ID</td>
+            <td>Project</td>
+            <td>Status</td>
+            <td>Priority</td>
+            <td>Subject</td>
+            <td>Updated</td>
+            <td>Created</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts | async">
+                <td>{{post.id}}</td>
+                <td>{{post.project}}</td>
+                <td>{{post.status}}</td>
+                <td>{{post.priority}}</td>
+                <td>{{post.subject}}</td>
+                <td>{{post.updated}}</td>
+                <td>{{post.made}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

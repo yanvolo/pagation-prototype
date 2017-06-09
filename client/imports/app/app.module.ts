@@ -4,11 +4,14 @@ import { AppComponent } from "./app.component";
 import { DemoComponent } from "./demo/demo.component";
 import { DemoDataService } from "./demo/demo-data.service";
 
+import {POSTS_DECLARATIONS} from './post';
+
 @NgModule({
   // Components, Pipes, Directive
   declarations: [
     AppComponent,
-    DemoComponent
+    DemoComponent,
+      ...POSTS_DECLARATIONS
   ],
   // Entry Components
   entryComponents: [
@@ -25,8 +28,4 @@ import { DemoDataService } from "./demo/demo-data.service";
   // Main Component
   bootstrap: [ AppComponent ]
 })
-export class AppModule {
-  constructor() {
-
-  }
-}
+export class AppModule {}

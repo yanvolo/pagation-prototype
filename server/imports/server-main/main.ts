@@ -1,26 +1,13 @@
-import {DemoCollection} from "../../../both/collections/demo.collection";
-import {Demo} from "../../../both/models/demo.model";
+import {loadSamplePosts} from "../fixtures/posts";
+import '../publications/posts';
 
 export class Main {
+  //This weird structure is just an artifiact of the demo project. Feel free to refractor it to make it better.
   start(): void {
     this.initFakeData();
   }
 
   initFakeData(): void {
-    if (DemoCollection.find({}).cursor.count() === 0) {
-      const data: Demo[] = [{
-        name: "Dotan",
-        age: 25
-      }, {
-        name: "Liran",
-        age: 26
-      }, {
-        name: "Uri",
-        age: 30
-      }];
-      data.forEach((obj: Demo) => {
-        DemoCollection.insert(obj);
-      });
-    }
+    loadSamplePosts();
   }
 }
